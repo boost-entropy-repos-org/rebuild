@@ -132,6 +132,7 @@ public class Installer implements InstallState {
 
         // 刷新: 数据源
         DruidDataSource ds = (DruidDataSource) Application.getBean(DataSource.class);
+        ds.restart();
         ds.setUrl(BootEnvironmentPostProcessor.getProperty("db.url"));
         ds.setUsername(BootEnvironmentPostProcessor.getProperty("db.user"));
         ds.setPassword(BootEnvironmentPostProcessor.getProperty("db.passwd"));
