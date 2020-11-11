@@ -19,6 +19,7 @@ import com.rebuild.core.support.RebuildConfiguration;
 import com.rebuild.core.support.integration.SMSender;
 import com.rebuild.utils.AppUtils;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
 import java.util.*;
 
@@ -26,6 +27,7 @@ import java.util.*;
  * @author devezhao
  * @since 2020/2/27
  */
+@Component
 public class FeedsScheduleJob extends DistributedJobLock {
 
     @Scheduled(cron = "0 * * * * ?")
